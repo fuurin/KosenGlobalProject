@@ -1,0 +1,128 @@
+html {
+    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+body {
+    background-repeat : no-repeat;
+    background-size: 100%;
+}
+
+#content {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+#page-header {
+    line-height: 70px;
+    background-color: #5cc0ff;
+}
+
+#site-title {
+    color: #fff;
+    margin: 0 auto;
+    padding-left: 15px;
+    font-size: 30px;
+}
+
+#global-navi {
+    float: right;
+    font-size: 21px;
+    padding-right: 15px;
+}
+
+.global-navi-link {
+    padding-right: 10px;
+}
+
+#global-navi .consult {
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+#page-main {
+    position: relative;
+    background-color: #656565;
+    height: 430px;
+}
+
+#search {
+    float: left;
+    width: 204px;
+    height: 100%;
+    background-color: #5cc0ff;
+    border: solid 10px #858585;
+    box-sizing: border-box;
+}
+
+#search-title {
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 23px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+#search-buttons {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-button {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.go-abroad {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ffaa00;
+    border: none;
+    margin: 30px auto;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+#world-map {
+    float: right;
+    width: 820px;
+    height: 100%;
+    border: solid 10px #858585;
+    box-sizing: border-box;
+}
+
+#world-map-img {
+    width: 100%;
+    height: 100%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 65px;
+    left: 590px;
+    border: 15px solid transparent;
+    border-top: 45px solid #ff3300;
+}
+
+#page-footer {
+    background-color: #5cc0ff;
+    height: 220px;
+}
