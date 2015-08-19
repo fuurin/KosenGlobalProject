@@ -22,8 +22,11 @@
 		    	<a href="https://www.google.co.jp">留学のプロセス</a>
 		    	<a href="https://www.google.co.jp">ロールモデル</a>
 		    	<a href="https://www.google.co.jp">奨学金</a>
-		    	<button class="consult" onclick="location.href='https://www.google.co.jp'">
-		    		相談する
+		    	<button id="register" onclick="location.href='https://www.google.co.jp'">
+		    		新規登録
+		    	</button>
+		    	<button id="login" onclick="location.href='https://www.google.co.jp'">
+		    		ログイン
 		    	</button>
 		    </span>
 		</header>
@@ -32,13 +35,31 @@
 			<div id="search">
 					<br><div id="search-title">留学検索</div><br>
 					<div id="search-buttons">
-						<button name="term">★期間別</button>
-						<button name="purpose">★目的別</button>
-						<button name="kosen">★高専別</button>
-						<button name="department">★学科別</button>
-						<button name="cost">★費用別</button>
+						<div class="search-button">
+							<img src='images/calendar.png'>
+							<button><strong>★期間別</strong></button>
+						</div>
+						<div class="search-button">
+							<img src='images/purpose.jpg'>
+							<button><strong>★目的別</strong></button>
+						</div>
+						<div class="search-button">
+							<img src='images/study.jpg'>
+							<button><strong>★高専別</strong></button>
+						</div>
+						<div class="search-button">
+							<img src='images/department.jpg'>
+							<button><strong>★学科別</strong></button>
+						</div>
+						<div class="search-button">
+							<img src='images/money.jpg'>
+							<button><strong>★費用別</strong></button>
+						</div>
 					</div>
-					<button class="go-abroad" onclick="location.href='https://www.google.co.jp'">
+					<button id="consult" onclick="location.href='https://www.google.co.jp'">
+			    			相談する
+			    	</button>
+					<button id="go-abroad" onclick="location.href='https://www.google.co.jp'">
 			    			留学したい
 			    	</button>
 			</div>

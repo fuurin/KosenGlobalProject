@@ -1,19 +1,19 @@
-var consult_duration = 500;
+var duration = 500;
 
 $(function () {
-	$(".consult")
+	$("#consult")
 		.on("mouseover", function(){
 			$(this).stop(true).animate({
 				'background-color': '#90E010',
-			}, consult_duration);
+			}, duration);
 		})
 		.on("mouseout", function(){
 			$(this).stop(true).animate({
 				'background-color': '#ff4500',
-			}, consult_duration);
+			}, duration);
 		});
 
-	$(".go-abroad")
+	$("#go-abroad")
 		.on("mouseover", function(){
 			$(this).stop(true).animate({
 				'width': '160px',
@@ -21,7 +21,7 @@ $(function () {
 				'top': '-5px',
 				'font-size': '26px',
 				'background-color': "#ff0000",
-			}, consult_duration);
+			}, duration);
 		})
 		.on("mouseout", function(){
 			$(this).stop(true).animate({
@@ -30,7 +30,19 @@ $(function () {
 				'top': '0px',
 				'font-size': '23px',
 				'background-color': "#ffaa00",
-			}, consult_duration);
+			}, duration);
+		});
+
+	$("#search-buttons .search-button button")
+		.on("mouseover", function () {
+			$(this).stop(true).animate({
+				'opacity': 0.8
+			}, duration * 0.7);
+		})
+		.on("mouseout", function () {
+			$(this).stop(true).animate({
+				'opacity': 0
+			}, duration * 0.7);
 		});
 
 	$(".triangle")

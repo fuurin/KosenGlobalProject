@@ -13,7 +13,7 @@ body {
 }
 
 #page-header {
-    line-height: 70px;
+    line-height: 60px;
     background-color: #5cc0ff;
     overflow: hidden;
 }
@@ -22,20 +22,20 @@ body {
     color: #fff;
     margin: 0 auto;
     padding-left: 15px;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 #global-navi {
     float: right;
-    font-size: 21px;
+    font-size: 18px;
     padding-right: 15px;
 }
 
-.global-navi a{
-    padding-right: 10px;
+#global-navi a{
+    padding-right: 5px;
 }
 
-#global-navi .consult {
+#register {
     width: 120px;
     height: 40px;
     font-size: 21px;
@@ -45,6 +45,21 @@ body {
     background-color: #ff4500;
     border: none;
     border-radius: 10px;
+    margin-left: 5px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+#login {
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5px;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
@@ -80,13 +95,46 @@ body {
     text-align: center;
 }
 
-#search-buttons button {
+#search-buttons .search-button {
+    position: relative;
     width: 100%;
-    font-size: 20px;
-    margin-bottom: 8px;
+    height: 40px;
 }
 
-.go-abroad {
+#search-buttons .search-button img {
+    width: 100%;
+    height: 100%;
+}
+
+#search-buttons .search-button button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 20px;
+    background-color: #000;
+    opacity: 0;
+    border: none;
+}
+
+#consult {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    margin: 15px auto;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+#go-abroad {
     display: block;
     position: relative;
     width: 150px;
@@ -97,7 +145,7 @@ body {
     color: #fff;
     background-color: #ffaa00;
     border: none;
-    margin: 30px auto;
+    margin: 15px auto;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
