@@ -15,6 +15,7 @@ body {
 #page-header {
     line-height: 70px;
     background-color: #5cc0ff;
+    overflow: hidden;
 }
 
 #site-title {
@@ -30,7 +31,7 @@ body {
     padding-right: 15px;
 }
 
-.global-navi-link {
+.global-navi a{
     padding-right: 10px;
 }
 
@@ -51,6 +52,7 @@ body {
     position: relative;
     background-color: #656565;
     height: 430px;
+    overflow: hidden;
 }
 
 #search {
@@ -73,12 +75,12 @@ body {
 }
 
 #search-buttons {
-    width: 150px;
+    width: 83%;
     margin: 0 auto;
     text-align: center;
 }
 
-.search-button {
+#search-buttons button {
     width: 100%;
     font-size: 20px;
     margin-bottom: 8px;
