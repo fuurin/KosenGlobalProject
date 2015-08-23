@@ -1,5 +1,5 @@
 <?php 
-	$word = $_POST['item'];
+	//$word = $_POST['item'];
 
-	return json_encode($word);
+	return json_encode("change");
  ?>
