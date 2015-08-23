@@ -1,5 +1,6 @@
 <?php 
 	//$word = $_POST['item'];
 
-	return "change";
+	header('Content-type: application/json');
+	return json_encode("change");
  ?>
