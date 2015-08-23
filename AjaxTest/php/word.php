@@ -1,3 +1,4 @@
 <?php 
-	echo json_encode(　$_POST['item']　);
+	$word = $_GET['item'];
+	echo json_encode($word);
 ?>

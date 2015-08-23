@@ -3,7 +3,7 @@ $( function() {
 		$.ajax({
 			url: 'php/word.php',
 			dataType: 'text',
-			type: 'POST',
+			type: 'GET',
 			data:{
 			       item: "checked!",
 			   },
