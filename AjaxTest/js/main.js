@@ -8,8 +8,7 @@ $( function() {
 			//        item: "change";
 			//    },
 			success: function (ret) {
-				var word = JSON.parse(ret);
-				console.log(word);
+				console.log(ret);
 			}
 		})
 	})
