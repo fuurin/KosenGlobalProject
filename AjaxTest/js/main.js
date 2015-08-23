@@ -5,7 +5,7 @@ $( function() {
 			dataType: 'text',
 			type: 'POST',
 			data:{
-			       item: "checked!";
+			       item: "checked!",
 			   },
 			success: function (ret) {
 				console.log(ret);
