@@ -1,3 +1,5 @@
 <?php 
-	return json_encode("change");
+	$word = $_POST['item'];
+
+	return json_encode($word);
  ?>

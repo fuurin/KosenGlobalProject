@@ -3,8 +3,12 @@ $( function() {
 		$.ajax({
 			url:'php/word.php',
 			type: 'POST',
-			success: function (arr) {
-				var word = JSON.parse(arr);
+			dataType:'json',
+			data:{
+		        item: "change"
+		    },
+			success: function (ret) {
+				var word = JSON.parse(ret);
 				console.log(word);
 			}
 		})
