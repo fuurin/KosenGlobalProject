@@ -2,8 +2,8 @@ $( function() {
 	$("#change").on('click', function () {
 		$.ajax({
 			url: 'php/word.php',
+			// dataType: 'text',
 			// type: 'POST',
-			// dataType:'json',
 			// data:{
 			//        item: "change";
 			//    },
