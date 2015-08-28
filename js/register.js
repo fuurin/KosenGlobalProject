@@ -2,6 +2,7 @@
 $( function() {
 	//入力フォーマットが正しければ通信開始
 	$("#submit").on('click', function () {
+		
 		//データ生成
 		var form_data = {
 			name: $("input[name=name]").val(),

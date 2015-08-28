@@ -1,6 +1,5 @@
 <?php
 	// このファイルをrequireしたものは必ずDBを閉じること。
-
 	require_once "macro.php";
 	
 	try
