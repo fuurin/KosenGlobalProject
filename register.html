@@ -5,13 +5,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="keyword" content="高専,高専生,留学,海外">
-<title>高専生留学支援サイト　ログインページ</title>
-<link rel="stylesheet" href="./css/index.css">
+<title>高専生留学支援サイト　新規登録ページ</title>
+<link rel="stylesheet" href="./css/register.css">
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/common.css">
 <script src="./js/vendor/jquery-1.10.2.min.js"></script>
 <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/register.js"></script>
 </head>
 
 <body background="images/background.jpg">
@@ -21,19 +21,20 @@
 		</header>
 
 		<div id="page_main" role="main">
-			<p id="page_title">ログイン</p>
+			<p id="page_title">新規登録</p>
 
-			<div id="login_form">
-				<form action="./php/index.php" method="post">
-					<p>ユーザ名:<input type="text" id="name"></p>
-					<p>パスワード:<input type="password" id="password"></p>
-					<p><input type="submit" value="ログイン"></p>
+			<div id="register_form">
+				<form method="post">
+					<p>ユーザ名:<input type="text" name="name"></p>
+					<p>高専名:<input type="text" name="institute"></p>
+					<p>パスワード:<input type="password" name="password"></p>
+					<p>パスワード確認:<input type="password" name="password_check"></p>
+					<p><input type="submit" value="新規登録"></p>
 				</form>
 			</div>
 
-			<input id="register" type="button" value="新規登録" 
-				onClick="location.href='register.html'">
-		
+			<input id="return" type="button" value="ログインページへ戻る" 
+					onClick="location.href='index.html'">
 		</div>
 
 	</div>

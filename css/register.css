@@ -1,0 +1,24 @@
+#page_title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#register_form {
+    position: absolute;
+    top: 20%;
+    left: 355px;
+}
+
+#register_form p:nth-child(-n+4) {
+    text-align: right;
+}
+
+#register_form p:nth-child(5) {
+    text-align: center;
+}
+
+#return {
+    position: absolute;
+    top: 80%;
+    left: 425px;
+}

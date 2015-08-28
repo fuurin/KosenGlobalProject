@@ -6,6 +6,6 @@
 	$port='3306';
 
 	//テーブル情報
-	$TABLE_USERS = 'kgp_users';			//ユーザテーブル
-	$TABLE_ARTICLES = 'kgp_article';	//記事テーブル
+	$TABLE_USERS = '15_users';			//ユーザテーブル
+	$TABLE_QUESTIONS = '15_questions';	//問題テーブル
 ?>

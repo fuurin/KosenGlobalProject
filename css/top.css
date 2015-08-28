@@ -1,30 +1,3 @@
-html {
-    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-
-body {
-    background-repeat : no-repeat;
-    background-size: 100%;
-}
-
-#content {
-    width: 1024px;
-    margin: 0 auto;
-}
-
-#page-header {
-    line-height: 60px;
-    background-color: #5cc0ff;
-    overflow: hidden;
-}
-
-#site-title {
-    color: #fff;
-    margin: 0 auto;
-    padding-left: 15px;
-    font-size: 23px;
-}
-
 #global-navi {
     float: right;
     font-size: 18px;
@@ -35,7 +8,7 @@ body {
     padding-right: 5px;
 }
 
-#register {
+#mypage {
     width: 120px;
     height: 40px;
     font-size: 21px;
@@ -49,7 +22,7 @@ body {
     box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
-#login {
+#logout {
     width: 120px;
     height: 40px;
     font-size: 21px;
@@ -170,9 +143,4 @@ body {
     left: 590px;
     border: 15px solid transparent;
     border-top: 45px solid #ff3300;
-}
-
-#page-footer {
-    background-color: #5cc0ff;
-    height: 220px;
 }
