@@ -1,41 +1,37 @@
-<?php 
-	include "ChromePhp.php";
-	require_once "macro.php";
+<?php
+	require_once 'connect_db.php';
 
-	ChromePhp::log("connect");
-
+	//　データ受け取り
 	$name=$_POST['name'];
 	$password=$_POST['password'];
 	$institute=$_POST['institute'];
 
-	try
-	{
-		$pdo = new PDO('mysql:dbname='.$db_name.';host='.$db_host,$db_hostname,$db_password,
-						array(	PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode='TRADITIONAL'",
-								PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		$pdo->query('SET NAMES utf8');
-	}
-	catch(PDOException $e)
-	{
-		exit($e->getMessage());
-	}
-
-	try
-	{
+	// データ登録
+	try　{
 		$stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute) 
 								VALUES (:name, :password, :institute)");
 		$stmt->bindValue(':name', $name);
 		$stmt->bindValue(':password', $password);
 		$stmt->bindValue(':institute', $institute);
 		$stmt->execute();
-
-		//データベース接続終了
-		$pdo = null;
 	}
-	catch(PDOException $e)
-	{
-		exit($e->getMessage());
-	}
+	catch(PDOException $e){ exit($e->getMessage()); }
 
-	echo json_encode($name);
+	// ID検索
+	try　{
+		$stmt = $pdo->prepare("SELECT id FROM ${TABLE_USERS}
+								WHERE name = :name and password = :password");
+		$stmt->bindValue(':name', $name);
+		$stmt->bindValue(':password', $password);
+		$stmt->execute();
+
+		$data = $stmt->fetch(PDO::FETCH_ASSOC)
+		$kgp_id = $data['id'];
+	}
+	catch(PDOException $e){ exit($e->getMessage()); }
+
+	//データベース接続終了
+	$pdo = null;
+
+	echo $kgp_id;
 ?>

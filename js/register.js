@@ -14,11 +14,11 @@ $( function() {
 			dataType: 'text',
 			type: 'POST',
 			data: form_data,
-			success: function (msg) {
-				console.log(msg);
+			success: function (kgp_id) {
+				$.cookie('kgp_id', kgp_id);
 			},
 			error: function () {
-				console.log("failed");
+				alert("failed");
 			},
 			timeout: 10000,
 		})
