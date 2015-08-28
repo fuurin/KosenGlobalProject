@@ -19,10 +19,10 @@
 
 	try
 	{
-		$stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, pass, institute) 
+		$stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute) 
 								VALUES (:name, :password, :institute)");
 		$stmt->bindValue(':name', $name);
-		$stmt->bindValue(':password', $pass);
+		$stmt->bindValue(':password', $password);
 		$stmt->bindValue(':institute', $institute);
 		$stmt->execute();
 
