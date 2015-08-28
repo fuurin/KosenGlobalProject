@@ -1,5 +1,8 @@
 <?php 
+	include "ChromePhp.php";
 	require_once "macro.php";
+
+	ChromePhp::log("connect");
 
 	$name=$_POST['name'];
 	$password=$_POST['password'];
