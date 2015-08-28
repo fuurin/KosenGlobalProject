@@ -6,7 +6,7 @@
 
 	$name=$_POST['name'];
 	$password=$_POST['password'];
-	$institute=$_POST['insitute'];
+	$institute=$_POST['institute'];
 
 	try
 	{
