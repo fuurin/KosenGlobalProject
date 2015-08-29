@@ -13,6 +13,8 @@
             $stmt->bindValue(':password', $password);
             $stmt->bindValue(':institute', $institute);
             $stmt->execute();
+
+            $stmt = null;
         }
         catch(PDOException $e) { exit($e->getMessage()); }
 
@@ -24,6 +26,8 @@
 
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$kgp_id = $data['id'];
+
+			$stmt = null;
         }
         catch (PDOException $e) { exit($e->getMessage()); }
 

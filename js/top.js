@@ -51,5 +51,6 @@ $(function () {
 		});
 
 	console.log($.cookie('kgp_id'));
+	$.removeCookie('kgp_id');
 });
 
