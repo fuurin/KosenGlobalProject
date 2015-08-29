@@ -14,10 +14,12 @@ $( function() {
                         type: 'POST',
                         data: form_data,
                         success: function (response) {
+                        		var res = json_decode(response);
                         		$.removeCookie('kgp_id');
-                                $.cookie('kgp_id', response['id']);
-                                console.log(response);
-                                console.log(response['id']);
+                                $.cookie('kgp_id', res['id']);
+                                console.log(res);
+                                console.log(res['id']);
+                                console.log($.cookie('kgp_id'));
                         },
                         error: function () {
                                 console.log("failed");
