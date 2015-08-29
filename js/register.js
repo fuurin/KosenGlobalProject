@@ -1,7 +1,7 @@
 $( function() {
 	// TODO:入力フォーマット判定
-
-	$("#register_form input:submit").on('click', function () {
+	// #register_form input:submit
+	$("#submit").on('click', function () {
 		
 		//　データ生成
 		var form_data = {
