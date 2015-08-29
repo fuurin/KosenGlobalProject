@@ -1,10 +1,30 @@
 <?php
 	require_once 'connect_db.php';
 
+<<<<<<< HEAD
 	//　データ受け取り
 	$user_name	=	(string)filter_input(INPUT_POST, 'user_name');
 	$pass 		=	(string)filter_input(INPUT_POST, 'password');
 	$institute	=	(string)filter_input(INPUT_POST, 'institute');
+=======
+	ChromePhp::log("connect");
+
+	$name=$_POST['name'];
+	$password=$_POST['password'];
+	$institute=$_POST['insitute'];
+
+	try
+	{
+		$pdo = new PDO('mysql:dbname='.$db_name.';host='.$db_host,$db_hostname,$db_password,
+						array(	PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode='TRADITIONAL'",
+								PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$pdo->query('SET NAMES utf8');
+	}
+	catch(PDOException $e)
+	{
+		exit($e->getMessage());
+	}
+>>>>>>> parent of ac4f64c... ユーザ登録機能
 
 	// データ登録
 	try
