@@ -5,7 +5,7 @@ $( function() {
 		
 		//　データ生成
 		var form_data = {
-			name: $("input[name=name]").val(),
+			name: $("input[name=user_name]").val(),
 			password: $("input[name=password]").val(),
 			institute: $("input[name=institute]").val()
 		};
