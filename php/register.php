@@ -34,5 +34,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo $kgp_id;
+        echo "kgp";
 ?>
