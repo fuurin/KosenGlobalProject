@@ -13,9 +13,9 @@ $( function() {
                         url: 'php/register.php',
                         type: 'POST',
                         data: form_data,
-                        success: function (kgp_id) {
+                        success: function (response) {
                         		$.removeCookie('kgp_id');
-                                $.cookie('kgp_id', kgp_id);
+                                $.cookie('kgp_id', response['id']);
                                 console.log($.cookie('kgp_id'));
                         },
                         error: function () {
