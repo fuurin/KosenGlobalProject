@@ -17,7 +17,8 @@ $( function() {
 			type: 'POST',
 			data: form_data,
 			success: function (kgp_id) {
-				$.cookie('kgp_id', kgp_id);
+				//$.cookie('kgp_id', kgp_id);
+				alert("success");
 			},
 			error: function () {
 				alert("failed");
