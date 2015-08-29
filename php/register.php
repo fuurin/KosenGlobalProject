@@ -14,7 +14,7 @@
             $stmt->bindValue(':institute', $institute);
             $stmt->execute();
 
-   			$stmt = $pdo->prepare("SELECT 'id' from ${TABLE_USERS} where 'name' = :name");
+   			$stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name ");
 			$stmt->bindValue(':name', $name);
 			$stmt->execute();
 
@@ -31,5 +31,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo json_encode($kgp_id);
+        echo json_encode($data);
 ?>
