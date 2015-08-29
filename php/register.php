@@ -14,25 +14,18 @@
             $stmt->bindValue(':institute', $institute);
             $stmt->execute();
 
-            $stmt = null;
-        }
-        catch(PDOException $e) { exit($e->getMessage()); }
-
-        //　ID検索
-        try {
-            $stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name");
+            $stmt = $pdo->prepare("SELECT 'id' from ${TABLE_USERS} where 'name' = :name");
 			$stmt->bindValue(':name', $name);
 			$stmt->execute();
 
 			$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			$kgp_id = $data['id'];
 
-			$stmt = null;
         }
-        catch (PDOException $e) { exit($e->getMessage()); }
+        catch(PDOException $e) { exit($e->getMessage()); }
 
         //データベース接続終了
         $pdo = null;
 
-        echo "kgp";
+        echo $kgp_id;
 ?>
