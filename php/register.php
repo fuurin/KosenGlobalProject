@@ -1,21 +1,9 @@
 <?php
-        require_once "macro.php";
+        require_once "connect_db.php";
 
         $name=$_POST['name'];
         $password=$_POST['password'];
         $institute=$_POST['institute'];
-
-        try
-        {
-                $pdo = new PDO('mysql:dbname='.$db_name.';host='.$db_host,$db_hostname,$db_password,
-                                                array(  PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode='TRADITIONAL'",
-                                                                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-                $pdo->query('SET NAMES utf8');
-        }
-        catch(PDOException $e)
-        {
-                exit($e->getMessage());
-        }
 
         try
         {
