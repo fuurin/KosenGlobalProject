@@ -18,8 +18,12 @@
 			$stmt->bindValue(':name', $name);
 			$stmt->execute();
 
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
-			$kgp_id = $data['id'];
+			if($data = $stmt->fetch(PDO::FETCH_ASSOC)){
+				$kgp_id = $data['id'];
+			}
+			else {
+				$kgp_id = "failed to get ID";
+			}
 
         }
         catch(PDOException $e) { exit($e->getMessage()); }
