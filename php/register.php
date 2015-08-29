@@ -14,12 +14,12 @@
             $stmt->bindValue(':institute', $institute);
             $stmt->execute();
 
-   			// $stmt = $pdo->prepare("SELECT 'id' from ${TABLE_USERS} where 'name' = :name");
-			// $stmt->bindValue(':name', $name);
-			// $stmt->execute();
+   			$stmt = $pdo->prepare("SELECT 'id' from ${TABLE_USERS} where 'name' = :name");
+			$stmt->bindValue(':name', $name);
+			$stmt->execute();
 
-			// $data = $stmt->fetch(PDO::FETCH_ASSOC);
-			// $kgp_id = $data['id'];
+			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$kgp_id = $data['id'];
 
         }
         catch(PDOException $e) { exit($e->getMessage()); }
@@ -27,5 +27,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo "kgp";
+        echo "kgp2";
 ?>
