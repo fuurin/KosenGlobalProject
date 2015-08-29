@@ -7,7 +7,7 @@
 
         try {
             $stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute)
-                                                            VALUES (:name, :password, :institute)");
+                                   VALUES (:name, :password, :institute)");
             $stmt->bindValue(':name', $name);
             $stmt->bindValue(':password', $password);
             $stmt->bindValue(':institute', $institute);
@@ -26,5 +26,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo json_encode($kgp_id);
+        echo $kgp_id;
 ?>
