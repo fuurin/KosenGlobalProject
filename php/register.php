@@ -14,7 +14,7 @@
             $stmt->execute();
 
             // 検索
-            $stmt = $pdo->prepare("SELECT id　from ${TABLE_USERS} where name = :name");
+            $stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name");
 			$stmt->bindValue(':name', $name);
 			$stmt->execute();
 
@@ -26,5 +26,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo $kgp_id;
+        echo strval($kgp_id);
 ?>
