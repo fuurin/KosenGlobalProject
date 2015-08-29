@@ -7,6 +7,7 @@
 
         // 登録
         try {
+        	// 新規ユーザ登録
             $stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute)
                                    VALUES (:name, :password, :institute)");
             $stmt->bindValue(':name', $name);
@@ -14,17 +15,12 @@
             $stmt->bindValue(':institute', $institute);
             $stmt->execute();
 
+            // IDを自動取得
    			$stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name ");
 			$stmt->bindValue(':name', $name);
 			$stmt->execute();
 
-			if($data = $stmt->fetch(PDO::FETCH_ASSOC)){
-				$kgp_id = $data['id'];
-			}
-			else {
-				$kgp_id = "failed to get ID";
-			}
-
+			$data = $stmt->fetch(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) { exit($e->getMessage()); }
 
