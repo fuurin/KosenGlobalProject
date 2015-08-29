@@ -1,5 +1,4 @@
-<?php
-
+<?php	
 	$db_name='phpdb';		//DB名	
 	$db_host='php.ci5vjjwa5osw.ap-northeast-1.rds.amazonaws.com';		//DBのIPアドレス
 	$db_hostname='root';		//DBユーザネーム

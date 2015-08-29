@@ -1,30 +1,18 @@
 <?php
-	require_once "macro.php";
-	
-	try
-	{
-		$pdo = new PDO('mysql:dbname='.$db_name.';host='.$db_host,$db_hostname,$db_password,
-						array(	PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode='TRADITIONAL'",
-								PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		$pdo->query('SET NAMES utf8');
-	}
-	catch(PDOException $e)
-	{
-		exit($e->getMessage());
-	}
+	require_once 'connect_db.php';
 
 	//　データ受け取り
-	$name=$_POST['name'];
-	$password=$_POST['password'];
-	$institute=$_POST['institute'];
+	$form_name=$_POST['name'];
+	$form_password=$_POST['password'];
+	$form_institute=$_POST['institute'];
 
 	// データ登録
 	try　{
 		$stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute) 
 								VALUES (:name, :password, :institute)");
-		$stmt->bindValue(':name', $name);
-		$stmt->bindValue(':password', $password);
-		$stmt->bindValue(':institute', $institute);
+		$stmt->bindValue(':name', $form_name);
+		$stmt->bindValue(':password', $form_password);
+		$stmt->bindValue(':institute', $form_institute);
 		$stmt->execute();
 	}
 	catch(PDOException $e){ exit($e->getMessage()); }
@@ -33,8 +21,8 @@
 	try　{
 		$stmt = $pdo->prepare("SELECT id FROM ${TABLE_USERS}
 								WHERE name = :name and password = :password");
-		$stmt->bindValue(':name', $name);
-		$stmt->bindValue(':password', $password);
+		$stmt->bindValue(':name', $form_name);
+		$stmt->bindValue(':password', $form_password);
 		$stmt->execute();
 
 		$data = $stmt->fetch(PDO::FETCH_ASSOC)
