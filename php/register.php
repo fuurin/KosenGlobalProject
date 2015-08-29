@@ -17,18 +17,18 @@
         catch(PDOException $e) { exit($e->getMessage()); }
 
         //　ID検索
-   //      try {
-   //          $stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name");
-			// $stmt->bindValue(':name', $name);
-			// $stmt->execute();
+        try {
+            $stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name");
+			$stmt->bindValue(':name', $name);
+			$stmt->execute();
 
-			// $data = $stmt->fetch(PDO::FETCH_ASSOC);
-			// $kgp_id = $data['id'];
-   //      }
-   //      catch (PDOException $e) { exit($e->getMessage()); }
+			$data = $stmt->fetch(PDO::FETCH_ASSOC);
+			$kgp_id = $data['id'];
+        }
+        catch (PDOException $e) { exit($e->getMessage()); }
 
         //データベース接続終了
         $pdo = null;
 
-        echo $name;
+        echo $kgp_id;
 ?>
