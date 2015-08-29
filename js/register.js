@@ -16,7 +16,8 @@ $( function() {
                         success: function (response) {
                         		$.removeCookie('kgp_id');
                                 $.cookie('kgp_id', response['id']);
-                                console.log($.cookie('kgp_id'));
+                                console.log(response);
+                                console.log(response['id']);
                         },
                         error: function () {
                                 console.log("failed");
