@@ -31,5 +31,5 @@
         //データベース接続終了
         $pdo = null;
 
-        echo $data;
+        echo json_encode($data);
 ?>

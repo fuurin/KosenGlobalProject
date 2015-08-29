@@ -13,7 +13,8 @@ $( function() {
                         url: 'php/register.php',
                         type: 'POST',
                         data: form_data,
-                        success: function (res) {
+                        success: function (response) {
+                        		var res = JSON.parse(response);
                         		$.removeCookie('kgp_id');
                                 $.cookie('kgp_id', res['id']);
                                 console.log(res);
