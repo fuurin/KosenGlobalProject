@@ -5,22 +5,18 @@
         $password=$_POST['password'];
         $institute=$_POST['institute'];
 
-        try
-        {
+        try {
                 $stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute)
                                                                 VALUES (:name, :password, :institute)");
                 $stmt->bindValue(':name', $name);
                 $stmt->bindValue(':password', $password);
                 $stmt->bindValue(':institute', $institute);
                 $stmt->execute();
+        }
+        catch(PDOException $e) { exit($e->getMessage()); }
 
-                //データベース接続終了
-                $pdo = null;
-        }
-        catch(PDOException $e)
-        {
-                exit($e->getMessage());
-        }
+        //データベース接続終了
+        $pdo = null;
 
         echo json_encode($name);
 ?>
