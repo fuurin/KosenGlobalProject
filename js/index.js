@@ -17,7 +17,6 @@ $( function() {
                         success: function (response) {
                         	var res = JSON.parse(response);
                                 $.cookie('kgp_id', res['id']);
-                                console.log($.cookie('kgp_id'));
                         },
                         error: function (response) {
                         	var res = JSON.parse(response);
