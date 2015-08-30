@@ -16,8 +16,7 @@ $( function() {
                         data: form_data,
                         success: function (response) {
                         	var res = JSON.parse(response);
-                                console.log(res['id']);
-                                if(res['id'] == null) {
+                                if(res['id'] != undefined) {
                                         $.cookie('kgp_id', res['id']);
                                         document.location = "top.html";
                                 }
