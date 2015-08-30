@@ -14,15 +14,17 @@
             $stmt->bindValue(':password', $password);
 			$stmt->execute();
 
-            //データベース接続終了
-            $pdo = null;
+            $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if(!($data = $stmt->fetch(PDO::FETCH_ASSOC))) {
-                header("location: ../index.html");
-                exit;
-            }
+            // if(!($data = $stmt->fetch(PDO::FETCH_ASSOC))) {
+            //     header("location: ../index.html");
+            //     exit;
+            // }
         }
         catch(PDOException $e) { exit($e->getMessage()); }
+
+        //データベース接続終了
+        $pdo = null;
 
         // データはJSON文字列で返す
         echo json_encode($data);
