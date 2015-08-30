@@ -1,7 +1,7 @@
 //phpに送信
 $( function() {
         //入力フォーマットが正しければ通信開始
-        $("#login_form submit").on('click', function () {
+        $("#submit").on('click', function () {
                 //データ生成
                 var form_data = {
                         name: $("input[name=name]").val(),
