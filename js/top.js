@@ -14,7 +14,8 @@ $(function () {
             data: form_data,
             success: function (response) {
             		var res = JSON.parse(response);
-            		name = res['name'];
+            		$("#user_name").text(res['name']);
+            		console.log(res);
             },
             error: function (response) {
             	    var res = JSON.parse(response);
@@ -22,8 +23,6 @@ $(function () {
             },
             timeout: 10000,
     });
-
-	$("#user_name").text(name);
 
 	$("#consult")
 		.on("mouseover", function(){
