@@ -17,7 +17,7 @@
             //データベース接続終了
             $pdo = null;
 
-            if($data != $stmt->fetch(PDO::FETCH_ASSOC)) {
+            if(!($data = $stmt->fetch(PDO::FETCH_ASSOC))) {
                 header("Location: ./index.html");
             }
         }
