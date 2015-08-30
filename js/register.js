@@ -26,8 +26,5 @@ $( function() {
                         },
                         timeout: 10000,
                 });
-
-                // Submit後、ページリロードされないらしい。
-	            return false;
-        })
+        });
 });
