@@ -1,8 +1,29 @@
 var duration = 500;
 
 $(function () {
+	var name = "";
 
-	$("#user_name").text($.cookie('kgp_id'));
+	//データ生成
+    var form_data = {
+            id: $.cookie('kgp_id'),
+    };
+
+    $.ajax({
+            url: 'php/top.php',
+            type: 'POST',
+            data: form_data,
+            success: function (response) {
+            		var res = JSON.parse(response);
+            		name = res['name'];
+            },
+            error: function (response) {
+            	    var res = JSON.parse(response);
+                    alert(res);
+            },
+            timeout: 10000,
+    });
+
+	$("#user_name").text(name);
 
 	$("#consult")
 		.on("mouseover", function(){
