@@ -14,7 +14,6 @@ $( function() {
                 $.ajax({
                         url: 'php/register.php',
                         type: 'POST',
-                        datatype: 'json',
                         data: form_data,
                         success: function (res) {
                                 $.cookie('kgp_id', JSON.parse(res)['id']);
