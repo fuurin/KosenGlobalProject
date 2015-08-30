@@ -9,17 +9,17 @@ $( function() {
                         institute: $("input[name=institute]").val()
                 };
 
-                $.removeCookie('kgp_id')
-
                 $.ajax({
                         url: 'php/register.php',
                         type: 'POST',
                         data: form_data,
-                        success: function (res) {
-                                $.cookie('kgp_id', JSON.parse(res)['id']);
+                        success: function (response) {
+                        		var res = JSON.parse(response);
+                        		$.removeCookie('kgp_id');
+                                $.cookie('kgp_id', res['id']);
                         },
                         error: function () {
-                                alert("Connection failed");
+                                console.log("failed");
                         },
                         timeout: 10000,
                 });
