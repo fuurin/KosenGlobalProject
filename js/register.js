@@ -24,7 +24,5 @@ $( function() {
                         },
                         timeout: 10000,
                 });
-
-                return false;
         });
 });

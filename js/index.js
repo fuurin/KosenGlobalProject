@@ -1,7 +1,7 @@
 //phpに送信
 $( function() {
         $.removeCookie('kgp_id');
-        
+
         //入力フォーマットが正しければ通信開始
         $("#login_form input:submit").on('click', function () {
                 //データ生成
@@ -25,5 +25,7 @@ $( function() {
                         },
                         timeout: 10000,
                 });
+
+                return false;
         });
 });
