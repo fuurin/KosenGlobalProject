@@ -14,10 +14,7 @@
             $stmt->bindValue(':password', $password);
             $stmt->execute();
 
-            if(!($data = $stmt->fetch(PDO::FETCH_ASSOC))) {
-               header("location: ../index.html");
-               exit;
-             }
+            $data = $stmt->fetch(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) { exit($e->getMessage()); }
 
