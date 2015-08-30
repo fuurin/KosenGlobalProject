@@ -19,6 +19,7 @@
 
             if(!($data = $stmt->fetch(PDO::FETCH_ASSOC))) {
                 header("location: ../index.html");
+                exit;
             }
         }
         catch(PDOException $e) { exit($e->getMessage()); }
