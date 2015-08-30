@@ -14,15 +14,11 @@ $( function() {
                         type: 'POST',
                         data: form_data,
                         success: function (response) {
-                        		var res = JSON.parse(response);
-                        		//$.removeCookie('kgp_id');
+                        		var res = JSON.parse(response)
                                 $.cookie('kgp_id', res['id']);
-                                console.log(response);
-                                console.log(res);
-                                console.log($.cookie('kgp_id'));
                         },
                         error: function () {
-                                console.log("failed");
+                                alert("connection failed");
                         },
                         timeout: 10000,
                 });
