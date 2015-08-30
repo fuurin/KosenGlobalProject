@@ -17,8 +17,8 @@ $( function() {
                         		var res = JSON.parse(response)
                                 $.cookie('kgp_id', res['id']);
                         },
-                        error: function () {
-                                alert("connection failed");
+                        error: function (res) {
+                                alert(res);
                         },
                         timeout: 10000,
                 });

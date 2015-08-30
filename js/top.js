@@ -52,6 +52,5 @@ $(function () {
 		.on("mouseover", function () {
 
 		});
-	console.log($.cookie('kgp_id'));
 });
 
