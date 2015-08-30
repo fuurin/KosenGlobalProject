@@ -8,11 +8,11 @@
         // SQL実行
         try {
             // IDが存在するか確認
-   			$stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} 
-                                    where name = :name and password = :password");
-			$stmt->bindValue(':name', $name);
+   			$stmt = $pdo->prepare(" SELECT id FROM ${TABLE_USERS}
+                                where name = :name and password = :password");
+            $stmt->bindValue(':name', $name);
             $stmt->bindValue(':password', $password);
-			$stmt->execute();
+            $stmt->execute();
 
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -27,5 +27,5 @@
         $pdo = null;
 
         // データはJSON文字列で返す
-        echo json_encode($data);
+        echo json_encode($name.$password);
 ?>
