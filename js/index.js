@@ -16,9 +16,10 @@ $( function() {
                         data: form_data,
                         success: function (response) {
                         	var res = JSON.parse(response);
-                                if(res['id'] != "") {
+                                console.log(res['id']);
+                                if(res['id'] == null) {
                                         $.cookie('kgp_id', res['id']);
-                                        document.location = "../top.html";
+                                        document.location = "top.html";
                                 }
                         },
                         error: function (response) {
