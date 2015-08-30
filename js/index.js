@@ -3,7 +3,7 @@ $( function() {
         $.removeCookie('kgp_id');
 
         //入力フォーマットが正しければ通信開始
-        $("#login_form input:submit").on('click', function () {
+        $("#submit").on('click', function () {
                 //データ生成
                 var form_data = {
                         name: $("input[name=name]").val(),
