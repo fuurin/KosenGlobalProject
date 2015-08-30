@@ -17,11 +17,17 @@ $( function() {
                         		var res = JSON.parse(response);
                         		$.removeCookie('kgp_id');
                                 $.cookie('kgp_id', res['id']);
+                                console.log(response);
+                                console.log(res);
+                                console.log($.cookie('kgp_id'));
                         },
                         error: function () {
                                 console.log("failed");
                         },
                         timeout: 10000,
                 });
+
+                // Submit後、ページリロードされないらしい。
+	            return false;
         })
 });
