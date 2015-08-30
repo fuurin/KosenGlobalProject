@@ -27,5 +27,5 @@
         $pdo = null;
 
         // データはJSON文字列で返す
-        echo json_encode($name.$password);
+        echo json_encode($data);
 ?>
