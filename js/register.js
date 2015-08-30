@@ -15,7 +15,7 @@ $( function() {
                         data: form_data,
                         success: function (response) {
                         		var res = JSON.parse(response);
-                        		$.removeCookie('kgp_id');
+                        		//$.removeCookie('kgp_id');
                                 $.cookie('kgp_id', res['id']);
                                 console.log(response);
                                 console.log(res);
