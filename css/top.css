@@ -36,6 +36,11 @@
     box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
+#user {
+    background-color: #ddd;
+    height: 60px;
+}
+
 #page_main {
     position: relative;
     background-color: #656565;

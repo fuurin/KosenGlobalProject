@@ -1,6 +1,9 @@
 var duration = 500;
 
 $(function () {
+
+	$("#user_name").text($.cookie('kgp_id'));
+
 	$("#consult")
 		.on("mouseover", function(){
 			$(this).stop(true).animate({
@@ -49,7 +52,6 @@ $(function () {
 		.on("mouseover", function () {
 
 		});
-
 	console.log($.cookie('kgp_id'));
 });
 
