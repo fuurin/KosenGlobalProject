@@ -1,21 +1,19 @@
 var duration = 500;
 
-$(function () {
-	var name = "";
-
+// 名前の文字列を、引数のセレクターに表示する関数
+var get_name = function (selector, url) {
 	//データ生成
     var form_data = {
             id: $.cookie('kgp_id'),
     };
 
     $.ajax({
-            url: 'php/top.php',
+            url: url,
             type: 'POST',
             data: form_data,
             success: function (response) {
             		var res = JSON.parse(response);
-            		$("#user_name").text(res['name']);
-            		console.log(res);
+            		$(selector).text(res['name']);
             },
             error: function (response) {
             	    var res = JSON.parse(response);
@@ -23,6 +21,11 @@ $(function () {
             },
             timeout: 10000,
     });
+};
+
+
+$(function () {
+	get_name("#user_name", 'php/top.php');
 
 	$("#consult")
 		.on("mouseover", function(){
@@ -73,4 +76,3 @@ $(function () {
 
 		});
 });
-
