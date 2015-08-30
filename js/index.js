@@ -8,20 +8,24 @@ $( function() {
                         password: $("input[name=password]").val()
                 };
 
+                $.removeCookie('kgp_id');
+
                 $.ajax({
                         url: 'php/index.php',
                         type: 'POST',
                         data: form_data,
                         success: function (response) {
                         	var res = JSON.parse(response);
-                        	$.removeCookie('kgp_id');
                                 $.cookie('kgp_id', res['id']);
+                                console.log($.cookie('kgp_id'));
                         },
                         error: function (response) {
-                        	    var res = JSON.parse(response);
+                        	var res = JSON.parse(response);
                                 alert(res);
                         },
                         timeout: 10000,
                 });
+
+                return false;
         });
 });
