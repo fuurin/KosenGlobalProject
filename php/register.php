@@ -2,9 +2,9 @@
         require_once "connect_db.php";
 
         // データ受け取り
-        $name		=	(string)filter_input(INPUT_POST, 'name');
-	 	$password 	=	(string)filter_input(INPUT_POST, 'password');
-	 	$institute	=	(string)filter_input(INPUT_POST, 'institute');
+        $name=$_POST['name'];
+        $password=$_POST['password'];
+        $institute=$_POST['institute'];
 
         // SQL実行
         try {
