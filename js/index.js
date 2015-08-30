@@ -16,7 +16,6 @@ $( function() {
                         data: form_data,
                         success: function (response) {
                         	var res = JSON.parse(response);
-                                console.log(response);
                                 $.cookie('kgp_id', res['id']);
                                 console.log($.cookie('kgp_id'));
                         },
@@ -26,7 +25,5 @@ $( function() {
                         },
                         timeout: 10000,
                 });
-
-                return false;
         });
 });
