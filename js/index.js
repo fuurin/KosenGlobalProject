@@ -18,7 +18,7 @@ $( function() {
                         	var res = JSON.parse(response);
                                 if(res['id'] != "") {
                                         $.cookie('kgp_id', res['id']);
-                                        document.location("../top.html");
+                                        document.location = "../top.html";
                                 }
                         },
                         error: function (response) {
