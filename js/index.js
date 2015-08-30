@@ -1,14 +1,14 @@
 //phpに送信
 $( function() {
+        $.removeCookie('kgp_id');
+        
         //入力フォーマットが正しければ通信開始
-        $("#submit").on('click', function () {
+        $("#login_form input:submit").on('click', function () {
                 //データ生成
                 var form_data = {
                         name: $("input[name=name]").val(),
                         password: $("input[name=password]").val()
                 };
-
-                $.removeCookie('kgp_id');
 
                 $.ajax({
                         url: 'php/index.php',
@@ -17,6 +17,7 @@ $( function() {
                         success: function (response) {
                         	var res = JSON.parse(response);
                                 $.cookie('kgp_id', res['id']);
+                                console.log($.cookie('kgp_id'));
                         },
                         error: function (response) {
                         	var res = JSON.parse(response);
@@ -24,6 +25,5 @@ $( function() {
                         },
                         timeout: 10000,
                 });
-                alert($.cookie('kgp_id'))
         });
 });
