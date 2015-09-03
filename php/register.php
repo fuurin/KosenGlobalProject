@@ -27,6 +27,9 @@
         //データベース接続終了
         $pdo = null;
 
+        // IDを設定
+        $_SESSION['id'] = $data['id'];
+
         // データはJSON文字列で返す
-        echo json_encode($data);
+        echo json_encode();
 ?>
