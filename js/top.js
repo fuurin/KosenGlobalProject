@@ -3,9 +3,7 @@ var duration = 500;
 // 名前の文字列を、引数のセレクターに表示する関数
 var get_name = function (selector, url) {
 	//データ生成
-    var form_data = {
-            id: $.cookie('kgp_id'),
-    };
+    var form_data = {};
 
     $.ajax({
             url: url,

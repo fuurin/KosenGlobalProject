@@ -8,7 +8,7 @@
     padding-right: 5px;
 }
 
-#mypage {
+#write_article {
     width: 120px;
     height: 40px;
     font-size: 21px;
@@ -22,7 +22,7 @@
     box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
-#logout {
+#article_list {
     width: 120px;
     height: 40px;
     font-size: 21px;
@@ -39,6 +39,37 @@
 #user {
     background-color: #ddd;
     height: 60px;
+    padding-right: 10px;
+}
+
+#mypage {
+    float: right;
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 5px 0px 5px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+#logout {
+    float: right;
+    width: 120px;
+    height: 40px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 5px 0px 5px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
 }
 
 #page_main {

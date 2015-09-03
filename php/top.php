@@ -2,7 +2,7 @@
         require_once "connect_db.php";
 
         // データ受け取り
-        $id	= (string)filter_input(INPUT_POST, 'id');
+        $id	= $_SESSION['id'];
 
         // SQL実行
         try {

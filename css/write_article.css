@@ -1,0 +1,39 @@
+#page_title {
+	text-align: center;
+	margin-top: 30px;
+}
+
+#return {
+	margin-left: 530px;
+}
+
+#write_article_form {
+}
+
+#write_article_table {
+	margin: 0 auto;
+	width: 600px;
+	border: 1;
+	background-color: white;
+}
+
+#write_article_table textarea{
+	resize: none;
+	width: 98%;
+}
+
+#submit {
+	position: absolute;
+	width: 600px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+#write_article_form p:nth-child(-n+4) {
+}
+
+#write_article_form p:nth-child(5) {
+}
+
+#return {
+}
