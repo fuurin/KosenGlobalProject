@@ -15,7 +15,8 @@ $( function() {
                         success: function (response) {
                         	var res = JSON.parse(response);
                                 if(res['id'] != undefined) {
-                                        document.location = "top.html";
+                                        console.log("success!");
+                                        //document.location = "top.html";
                                 }
                         },
                         error: function (response) {
