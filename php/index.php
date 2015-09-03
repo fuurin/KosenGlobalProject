@@ -24,5 +24,5 @@
         $_SESSION['id'] = $data['id'];
 
         // データはJSON文字列で返す
-        echo json_encode();
+        echo json_encode($data);
 ?>
