@@ -15,8 +15,7 @@ $( function() {
                         success: function (response) {
                         	var res = JSON.parse(response);
                                 if(res['id'] != undefined) {
-                                        console.log("success!");
-                                        //document.location = "top.html";
+                                        document.location = "top.html";
                                 }
                         },
                         error: function (response) {
@@ -25,7 +24,5 @@ $( function() {
                         },
                         timeout: 10000,
                 });
-
-                return false;
         });
 });

@@ -1,5 +1,4 @@
 <?php
-        include "ChromePhp.php";
         require_once "connect_db.php";
 
         // データ受け取り
@@ -21,9 +20,6 @@
 
         //データベース接続終了
         $pdo = null;
-
-        ChromePhp::log('Hello console!日本語もOK');
-        ChromePhp::log($data['id']);
 
         $_SESSION['id'] = $data['id'];
 
