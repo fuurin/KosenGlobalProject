@@ -1,8 +1,12 @@
 //phpに送信
 $( function() {
-	//入力フォーマットが正しければ通信開始
-	$("#submit").on('click', function () {
-		//データ生成
+	// フォームチェック
+	var check_register_form = function () {
+		return true;
+	};
+
+	// Ajax
+	var send_register_form = function (url) {
 		var form_data = {
 			name: $("input[name=name]").val(),
 			password: $("input[name=password]").val(),
@@ -10,7 +14,7 @@ $( function() {
 		};
 
 		$.ajax({
-			url: 'php/register.php',
+			url: url,
 			type: 'POST',
 			data: form_data,
 			error: function (response) {
@@ -19,5 +23,11 @@ $( function() {
 			},
 			timeout: 10000,
 		});
+	};
+
+	$("#submit").on('click', function () {
+		if( check_register_form() ) {
+			send_register_form('php/register.php');
+		}
 	});
 });
