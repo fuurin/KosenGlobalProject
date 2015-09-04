@@ -4,7 +4,7 @@ $( function() {
 	var CONNECTION_ERR_MSG = "サーバに接続できません。\nインターネットに接続されているかをご確認ください。"
 
 	var addErrorMessage = function(selector, msg) {
-		selector.before('<span class="errorMsg">' + msg + '</span>')
+		selector.before('<span id="error_msg">' + msg + '</span>')
 	};
 
 	$.ajax({
