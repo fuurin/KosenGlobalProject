@@ -1,26 +1,27 @@
 <?php
+        include 'ChromePhp.php';
         require_once "connect_db.php";
 
         // データ受け取り
-        $name		=	(string)filter_input(INPUT_POST, 'name');
-	 	$password 	=	(string)filter_input(INPUT_POST, 'password');
-	 	$institute	=	(string)filter_input(INPUT_POST, 'institute');
+        $country	=	(string)filter_input(INPUT_POST, 'country');
+	 	$university =	(string)filter_input(INPUT_POST, 'university');
+	 	$article	=	(string)filter_input(INPUT_POST, 'article');
+        $id         =   $_SESSION['id'];
+
+        ChromePhp::log($_POST['picture']);
 
         // SQL実行
         try {
-        	// 新規ユーザ登録
-            $stmt = $pdo->prepare("INSERT INTO ${TABLE_USERS}(name, password, institute)
-                                   VALUES (:name, :password, :institute)");
-            $stmt->bindValue(':name', $name);
-            $stmt->bindValue(':password', $password);
-            $stmt->bindValue(':institute', $institute);
+        	// 新規記事登録
+            $stmt = $pdo->prepare("INSERT INTO 
+                                    ${TABLE_ARTICLE}(id, country, university, article)
+                                   VALUES
+                                    (:id, :country, :university, :article)");
+            $stmt->bindValue(':id', $id);
+            $stmt->bindValue(':country', $country);
+            $stmt->bindValue(':university', $university);
+            $stmt->bindValue(':article', $article);
             $stmt->execute();
-
-            // IDを自動取得
-   			$stmt = $pdo->prepare("SELECT id from ${TABLE_USERS} where name = :name ");
-			$stmt->bindValue(':name', $name);
-			$stmt->execute();
-			$data = $stmt->fetch(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) { exit($e->getMessage()); }
 
@@ -28,5 +29,5 @@
         $pdo = null;
 
         // データはJSON文字列で返す
-        echo json_encode($data);
+        echo json_encode();
 ?>

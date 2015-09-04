@@ -11,45 +11,46 @@
 <link rel="stylesheet" href="./css/common.css">
 <script src="./js/vendor/jquery-1.10.2.min.js"></script>
 <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="./js/vendor/jquery.cookie.js"></script>
 <script src="./js/write_article.js"></script>
 </head>
 
 <body background="images/background.jpg">
-        <div id="content">
-                <header id="page_header" role="banner">
-                    <span id="site_title">高専グローバルプロジェクト</span>
-                    <span id="return">
-	                    <button onClick="location.href='top.html'">
-	                    	TOPページへ戻る
-	                    </button>
-                    </span>
-                </header>
+	<div id="content">
+		<header id="page_header" role="banner">
+			<span id="site_title">高専グローバルプロジェクト</span>
+			<span id="return">
+				<button onClick="location.href='top.html'">
+					TOPページへ戻る
+				</button>
+			</span>
+		</header>
 
-                <div id="page_main" role="main">
-					<p id="page_title">記事作成</p>
-					<form method="post" id="write_article_form">
-						<table border="2" id="write_article_table">
-							<tr>
-								<td>留学先の国名:</td>
-								<td><input type="text" name="country"></td>
-							</tr>
-							<tr>
-								<td>留学先の学校名:</td>
-								<td><input type="text" name="university"></td>
-							</tr>
-							<tr>
-								<td>写真（1枚):</td>
-								<td><input type="file" name="picture"></td>
-							</tr>
-							<tr>
-								<td>記事:</td>
-								<td><textarea name="article" rows="10" cols="50"></textarea></td>
-							</tr>
-						</table>
-						<input type="submit" value="投稿" id="submit">
-					</form>
-                </div>
-        </div>
+		<div id="page_main" role="main">
+			<p id="page_title">記事作成</p>
+			<form method="post" id="write_article_form">
+				<table border="2" id="write_article_table">
+					<tr>
+						<td>留学先の国名:</td>
+						<td><input type="text" name="country"></td>
+					</tr>
+					<tr>
+						<td>留学先の学校名:</td>
+						<td><input type="text" name="university"></td>
+					</tr>
+					<tr>
+						<td>写真（1枚):</td>
+						<td><input type="file" name="picture"></td>
+					</tr>
+					<tr>
+						<td>記事:</td>
+						<td>
+							<textarea name="article" rows="10" cols="50"></textarea>
+						</td>
+					</tr>
+				</table>
+				<input type="submit" value="投稿" id="submit">
+			</form>
+		</div>
+	</div>
 </body>
 </html>
