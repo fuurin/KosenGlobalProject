@@ -18,12 +18,10 @@ $( function() {
 					type: 'POST',
 					data: form_data,
 					success: function (response) {
-						//var res = JSON.parse(response);
 						console.log("success");
 					},
 					error: function (response) {
-						var res = JSON.parse(response);
-						alert(res);
+						alert(response);
 					},
 					timeout: 10000,
 				});

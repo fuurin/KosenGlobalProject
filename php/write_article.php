@@ -8,7 +8,11 @@
 	 	$article	=	(string)filter_input(INPUT_POST, 'article');
         $id         =   $_SESSION['id'];
 
-        //ChromePhp::log($_POST['picture']);
+        ChromePhp::log($country);
+        ChromePhp::log($university);
+        ChromePhp::log($article);
+        ChromePhp::log($id);
+        ChromePhp::log($_POST['picture']);
 
         // SQL実行
         try {
