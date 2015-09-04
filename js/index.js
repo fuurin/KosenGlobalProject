@@ -1,5 +1,8 @@
 //phpに送信
 $( function() {
+	var AUTHENTIFICATION_ERR_MSG = "ユーザ名またはパスワードが間違っています。";
+	var CONNECTION_ERR_MSG = "サーバに接続できません。\nインターネットに接続されているかをご確認ください。"
+
 	$.ajax({
 		url: './php/checkID.php',
 		success: function (res) {
@@ -8,7 +11,6 @@ $( function() {
 			}
 		},
 		error: function (res) {
-			alert(res);
 			return false;
 		},
 		timeout: 10000
@@ -29,17 +31,17 @@ $( function() {
 			data: form_data,
 			success: function (response) {
 				var res = JSON.parse(response);
-					if(res['id'] != undefined) {
-						document.location = "top.html";
-					}
-					else {
-						return false;
-					}
-			},
-			error: function (response) {
-				var res = JSON.parse(response);
-					alert(res);
+				if(res['id'] != undefined) {
+					document.location = "top.html";
+				}
+				else {
+					$('#error').text(AUTHENTIFICATION_ERR_MSG);
 					return false;
+				}
+			},
+			error: function (response) {	
+				alert(CONNECTION_ERR_MSG);
+				return false;
 			},
 			timeout: 10000,
 		});
