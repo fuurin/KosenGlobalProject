@@ -9,12 +9,12 @@ $( function() {
 				var form_data = {
 						country: $("input[name=country]").val(),
 						university: $("input[name=university]").val(),
-						article: $("input[name=article]").val(),
+						article: $("textarea[name=article]").val(),
 						picture: $("input[name=picture]").val()
 				};
 
 				$.ajax({
-					url: 'php/register.php',
+					url: 'php/write_article.php',
 					type: 'POST',
 					data: form_data,
 					success: function (response) {
