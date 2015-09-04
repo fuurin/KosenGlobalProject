@@ -3,7 +3,7 @@ $( function()
 	$.ajax({
 		url: 'checkID.php',
 		success: function (res) {
-			if (!res) {
+			if (res==true) {
 				document.location = "top.html";
 			};
 		},
