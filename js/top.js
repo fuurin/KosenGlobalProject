@@ -32,6 +32,7 @@ $(function () {
 				url: "./php/logout.php",
 				timeout: 10000,
 			});
+			$.removeCookie("id");
 			document.location = "index.html";
 		});
 
