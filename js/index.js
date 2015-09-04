@@ -1,5 +1,5 @@
 //phpに送信
-$( function()
+$( function() {
 	$.ajax({
 		url: 'checkID.php',
 		success: function (res) {
