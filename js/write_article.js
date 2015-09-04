@@ -18,7 +18,8 @@ $( function() {
 					type: 'POST',
 					data: form_data,
 					success: function (response) {
-						console.log("success");
+						console.log("connection success");
+						console.log(response);
 					},
 					error: function (response) {
 						alert(response);
