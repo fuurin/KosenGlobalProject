@@ -1,10 +1,13 @@
 //phpに送信
 $( function() {
 	$.ajax({
-		url: 'checkID.php',
+		url: './php/checkID.php',
 		success: function (res) {
-			if (res==true) {
+			if (res=="true") {
 				document.location = "top.html";
+			}
+			else {
+				alert("failed");
 			};
 		},
 		error: function (res) {
