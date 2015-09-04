@@ -33,6 +33,7 @@ $(function () {
 				timeout: 10000,
 			});
 			$.removeCookie("id");
+			$.removeCookie("name");
 			document.location = "index.html";
 		});
 

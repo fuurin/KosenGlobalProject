@@ -4,7 +4,8 @@ $( function() {
 		url: './php/checkID.php',
 		success: function (res) {
 			if (res=="true") {
-				document.location = "top.html";
+				//document.location = "top.html";
+				alert("id is set");
 			}
 			else {
 				alert("failed");
