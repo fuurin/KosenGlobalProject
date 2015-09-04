@@ -3,6 +3,10 @@ $( function() {
 	var AUTHENTIFICATION_ERR_MSG = "ユーザ名またはパスワードが間違っています。";
 	var CONNECTION_ERR_MSG = "サーバに接続できません。\nインターネットに接続されているかをご確認ください。"
 
+	var addErrorMessage = function(selector, msg) {
+		selector.before('<span class="errorMsg">' + msg + '</span>')
+	};
+
 	$.ajax({
 		url: './php/checkID.php',
 		success: function (res) {
@@ -35,7 +39,7 @@ $( function() {
 					document.location = "top.html";
 				}
 				else {
-					$('#error').text(AUTHENTIFICATION_ERR_MSG);
+					addErrorMessage( $("#login_form"), AUTHENTIFICATION_ERR_MSG);
 					return false;
 				}
 			},
