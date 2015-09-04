@@ -17,6 +17,9 @@ $( function() {
                                 if(res['id'] != undefined) {
                                         document.location = "top.html";
                                 }
+                                else {
+                                        return false;
+                                }
                         },
                         error: function (response) {
                         	var res = JSON.parse(response);
