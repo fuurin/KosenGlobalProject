@@ -6,11 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="keyword" content="高専,高専生,留学,海外">
 <title>高専生留学支援サイト　記事作成ページ</title>
-<link rel="stylesheet" href="./css/write_article.css">
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/write_article.css">
 <script src="./js/vendor/jquery-1.10.2.min.js"></script>
 <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./js/vendor/jquery.cookie.js"></script>
 <script src="./js/write_article.js"></script>
 </head>
 
@@ -23,6 +24,13 @@
 					TOPページへ戻る
 				</button>
 			</span>
+			<div id="user">
+		    	ようこそ <span id="user_name"></span> さん
+		    	<button id="mypage" onclick="location.href='https://www.google.co.jp'">
+		    		マイページ
+		    	</button>
+		    	<button id="logout">ログアウト</button>
+		    </div>
 		</header>
 
 		<div id="page_main" role="main">

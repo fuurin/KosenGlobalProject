@@ -12,6 +12,7 @@ var get_name = function (selector, url) {
             success: function (response) {
             		var res = JSON.parse(response);
             		$(selector).text(res['name']);
+            		$.cookie('name', res['name']);
             },
             error: function (response) {
             	    var res = JSON.parse(response);

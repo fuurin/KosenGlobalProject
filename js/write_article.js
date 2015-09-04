@@ -1,5 +1,7 @@
 //phpに送信
 $( function() {
+		$('#user_name').text($.cookie('name'));
+
 		//入力フォーマットが正しければ通信開始
 		$("#submit").on('click', function () {
 			var myRet = confirm("本当にこの記事を投稿しますか？");
@@ -17,16 +19,17 @@ $( function() {
 					url: 'php/write_article.php',
 					type: 'POST',
 					data: form_data,
-					success: function (response) {
-						console.log("connection success");
-						console.log(response);
+					success: function () {
+						// モーダルウィンドウを表示し、TOPへ戻る
 					},
 					error: function (response) {
 						alert(response);
+						return false;
 					},
 					timeout: 10000,
 				});
-
+			}
+			else {
 				return false;
 			}
 		});

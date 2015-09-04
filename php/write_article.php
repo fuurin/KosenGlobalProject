@@ -19,14 +19,8 @@
             $stmt->bindValue(':article', $article);
             $stmt->execute();
         }
-        catch(PDOException $e) {
-            echo "SQLfailed";
-            exit($e->getMessage());
-        }
+        catch(PDOException $e) { exit($e->getMessage()); }
 
         //データベース接続終了
         $pdo = null;
-
-        // データは文字列で返す
-        echo "SQLsuccess";
 ?>

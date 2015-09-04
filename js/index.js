@@ -21,6 +21,7 @@ $( function() {
                         error: function (response) {
                         	var res = JSON.parse(response);
                                 alert(res);
+                                return false;
                         },
                         timeout: 10000,
                 });
