@@ -6,9 +6,6 @@ $( function() {
 			if (res=="true") {
 				document.location = "top.html";
 			}
-			else {
-				alert("failed");
-			};
 		},
 		error: function (res) {
 			alert(res);
@@ -17,7 +14,8 @@ $( function() {
 		timeout: 10000
 	});
 
-	//入力フォーマットが正しければ通信開始
+	//入力フォーマットが正しいかどうかの判定
+	
 	$("#submit").on('click', function () {
 		//データ生成
 		var form_data = {
