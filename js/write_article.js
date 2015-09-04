@@ -2,6 +2,15 @@
 $( function() {
 		$('#user_name').text($.cookie('name'));
 
+		$("#logout")
+			.on("click", function () {
+				$.ajax({
+					url: "./php/logout.php",
+					timeout: 10000,
+				});
+				document.location = "index.html";
+			});
+
 		//入力フォーマットが正しければ通信開始
 		$("#submit").on('click', function () {
 			var myRet = confirm("本当にこの記事を投稿しますか？");
@@ -20,7 +29,7 @@ $( function() {
 					type: 'POST',
 					data: form_data,
 					success: function () {
-						// モーダルウィンドウを表示し、TOPへ戻る
+						// モーダルウィンドウを表示し、TOPへ戻るボタンを設置
 					},
 					error: function (response) {
 						alert(response);
