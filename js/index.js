@@ -13,7 +13,10 @@ $( function() {
 		dataType: "json",
 		success: function (response) {
 			var res = JSON.parse(response);
-			if(res["exist"]=="true"){
+			console.log(res);
+			console.log(response);
+			console.log(res["exist"]);
+			if(res["exist"]==true){
 				document.location = "top.html";
 			}
 		},
