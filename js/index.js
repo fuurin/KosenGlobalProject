@@ -8,20 +8,20 @@ $( function() {
 	};
 
 	// IDがあれば、TOPへ移動
-	$.ajax({
-		url: './php/checkID.php',
-		dataType: "text",
-		success: function (res) {
-			if(res=="true"){
-				document.location = "top.html";
-			}
-		},
-		error: function (res) {
-			alert(res);
-			return false;
-		},
-		timeout: 10000
-	});
+	// $.ajax({
+	// 	url: './php/checkID.php',
+	// 	dataType: "text",
+	// 	success: function (res) {
+	// 		if(res=="true"){
+	// 			document.location = "top.html";
+	// 		}
+	// 	},
+	// 	error: function (res) {
+	// 		alert(res);
+	// 		return false;
+	// 	},
+	// 	timeout: 10000
+	// });
 
 	//入力フォーマットが正しいかどうかの判定
 	
