@@ -27,6 +27,7 @@ $( function() {
 				institute: $("input[name=institute]").val()
 			};
 			send_register_form('php/register.php', form_data);
+			document.location = "top.html";
 		}
 	});
 });
