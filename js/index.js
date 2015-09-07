@@ -20,6 +20,9 @@ $( function() {
 				document.location = "top.html";
 			}
 		},
+		error: function () {
+			console.log("failed");
+		}
 		timeout: 10000
 	});
 
