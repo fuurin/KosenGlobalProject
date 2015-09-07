@@ -11,7 +11,6 @@ $( function() {
 	$.ajax({
 		url: 'php/checkID.php',
 		dataType: "json",
-		data: {},
 		success: function (response) {
 			var res = JSON.parse(response);
 			console.log(res);
