@@ -11,7 +11,7 @@ $( function() {
 	$.ajax({
 		url: 'php/checkID.php',
 		success: function (res) {
-			var res = JSON.parse(response);
+			var res = JSON.parse(res);
 			if(res["exist"]=="true"){
 				document.location = "top.html";
 			}
