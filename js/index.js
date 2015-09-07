@@ -1,13 +1,3 @@
-// IDがあれば、TOPへ移動
-$.ajax({
-	url: './php/checkID.php',
-	error: function (res) {
-		alert(res);
-		return false;
-	},
-	timeout: 10000
-});
-
 //phpに送信
 $( function() {
 	var AUTHENTIFICATION_ERR_MSG = "ユーザ名またはパスワードが間違っています。";
@@ -16,6 +6,16 @@ $( function() {
 	var addErrorMessage = function(selector, msg) {
 		selector.before('<div id="error_msg">' + msg + '</div>');
 	};
+
+	// IDがあれば、TOPへ移動
+	$.ajax({
+		url: './php/checkID.php',
+		error: function (res) {
+			alert(res);
+			return false;
+		},
+		timeout: 10000
+	});
 
 	//入力フォーマットが正しいかどうかの判定
 	
