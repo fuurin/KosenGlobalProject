@@ -10,8 +10,9 @@ $( function() {
 	// IDがあれば、TOPへ移動
 	$.ajax({
 		url: 'php/checkID.php',
+		dataType: "json",
 		success: function (response) {
-			//var res = JSON.parse(response);
+			var res = JSON.parse(response);
 			console.log(response);
 			console.log(res);
 			if(res["exist"]=="true"){
