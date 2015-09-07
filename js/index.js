@@ -1,16 +1,6 @@
-//phpに送信
-$( function() {
-	var AUTHENTIFICATION_ERR_MSG = "ユーザ名またはパスワードが間違っています。";
-	var CONNECTION_ERR_MSG = "サーバに接続できません。\nインターネットに接続されているかをご確認ください。"
-
-	var addErrorMessage = function(selector, msg) {
-		selector.before('<div id="error_msg">' + msg + '</div>');
-	};
-
-	// IDがあれば、TOPへ移動
+// IDがあれば、TOPへ移動
 	$.ajax({
 		url: 'php/checkID.php',
-		dataType: "json",
 		success: function (response) {
 			var res = JSON.parse(response);
 			console.log(res);
@@ -25,6 +15,15 @@ $( function() {
 		},
 		timeout: 10000
 	});
+
+//phpに送信
+$( function() {
+	var AUTHENTIFICATION_ERR_MSG = "ユーザ名またはパスワードが間違っています。";
+	var CONNECTION_ERR_MSG = "サーバに接続できません。\nインターネットに接続されているかをご確認ください。"
+
+	var addErrorMessage = function(selector, msg) {
+		selector.before('<div id="error_msg">' + msg + '</div>');
+	};
 
 	//入力フォーマットが正しいかどうかの判定
 	
