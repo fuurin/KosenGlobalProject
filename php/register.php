@@ -30,6 +30,6 @@
         // IDを設定
         $_SESSION['id'] = $data['id'];
 
-        // データはJSON文字列で返す
-        echo json_encode();
+        // TOPに飛ぶ
+        header("location:top.html");
 ?>

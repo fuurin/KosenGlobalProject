@@ -8,6 +8,7 @@ var get_name = function (selector, url) {
 	$.ajax({
 			url: url,
 			type: 'POST',
+			dataType: "json",
 			data: form_data,
 			success: function (response) {
 					var res = JSON.parse(response);
@@ -32,9 +33,6 @@ $(function () {
 				url: "./php/logout.php",
 				timeout: 10000,
 			});
-			$.removeCookie("id");
-			$.removeCookie("name");
-			document.location = "index.html";
 		});
 
 	$("#consult")

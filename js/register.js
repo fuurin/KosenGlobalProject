@@ -10,6 +10,7 @@ $( function() {
 		$.ajax({
 			url: url,
 			type: 'POST',
+			dataType: "json",
 			data: form_data,
 			error: function (response) {
 				alert(res);
