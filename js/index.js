@@ -22,7 +22,7 @@ $( function() {
 		},
 		error: function () {
 			console.log("failed");
-		}
+		},
 		timeout: 10000
 	});
 
