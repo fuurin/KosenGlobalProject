@@ -13,15 +13,9 @@ $( function() {
 		dataType: "json",
 		success: function (response) {
 			var res = JSON.parse(response);
-			console.log(response);
-			console.log(res);
 			if(res["exist"]=="true"){
 				document.location = "top.html";
 			}
-		},
-		error: function (res) {
-			alert(res);
-			return false;
 		},
 		timeout: 10000
 	});
