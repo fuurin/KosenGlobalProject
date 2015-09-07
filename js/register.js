@@ -10,11 +10,7 @@ $( function() {
 		$.ajax({
 			url: url,
 			type: 'POST',
-			dataType: "json",
 			data: form_data,
-			error: function (response) {
-				alert(res);
-			},
 			timeout: 10000,
 		});
 	};
@@ -28,7 +24,6 @@ $( function() {
 				institute: $("input[name=institute]").val()
 			};
 			send_register_form('php/register.php', form_data);
-			document.location = "top.html";
 		}
 	});
 });
